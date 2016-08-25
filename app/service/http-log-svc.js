@@ -30,7 +30,8 @@
                         return response || $q.when(response);
                     },
                     responseError: function(rejection) {
-                        $log.log(getTimeStamp() + ': response error Status: ' + rejection.status + '(' + rejection.statusText + ')' + ' Method: ' + rejection.config.method + ', url: ' + rejection.config.url);
+                        $log.log(getTimeStamp() + ': response error Status: ' + rejection.status + '(' + rejection.statusText + ')' +
+                            ' Method: ' + rejection.config.method + ', url: ' + rejection.config.url);
                         // For error function, the explicite reject, otherwise, it will be treated as resolved
                         return $q.reject(rejection);
                     }
